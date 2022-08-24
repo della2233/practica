@@ -38,4 +38,3 @@ class Persona:
        "\nEl peso es: " + str(peso) + "\nEl estado civil es: " + estado_civil +
         "\nEl grado de estudios es: " + grado_estudio)
 
-hi
