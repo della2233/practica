@@ -1,6 +1,4 @@
-class Persona:
-
-# se definen las variables con su tipo de dato, para ingresarlo despues.
+class Persona():
 
     nombre: str
     apellido_materno: str
@@ -12,14 +10,21 @@ class Persona:
     estado_civil: str 
     grado_estudio: str
 
-#se crea un metodo(se le nombro atributo al azar), para poder llamarlo cuando sea necesario
+    #self para englobar los atributos al metodo
+    def __init_(self):
+        self.nombre = nombre
+        self.apellido_paterno = apellido_paterno
+        self.apellido_materno = apellido_materno
+        self.edad = edad
+        self.genero = genero
+        self.estatura = estatura
+        self.peso = peso
+        self.estado_civil = estado_civil
+        self.grado_estudio = grado_estudio
 
-    def __init__(self, atributo):
-        self.atributo = atributo
+#imput para pedir datos, antes de el poner tipo de dato(str no es necesario ponerlo)
 
-#se pide al usuario ingresar los datos con input.
-
-    nombre = str(input("Escribe tu nombre: "))
+    nombre = str(input("escribe tu nombre: "))
     apellido_paterno = str(input("Escribe tu apellido paterno: "))
     apellido_materno = str(input("Escribe tu apellido materno: "))
     edad = int(input("Escribe tu edad: "))
@@ -29,12 +34,11 @@ class Persona:
     estado_civil = str(input("Escribe tu estado civil: "))
     grado_estudio = str(input("Escribe tu grado de estudios: "))
 
-#se imprimen en pantalla los datos dados haciendo concatenaciones, los datos de tipo int o float se 
-#convierten a str con str(atributo).
-
-    print("\nEl nombre es: " + nombre + "\nEl apellido paterno es: " + apellido_paterno +
-     "\nEl apellido materno es: " + apellido_materno + "\nLa edad es: " + str(edad) +
-      "\nEl genero es: " + genero + "\nLa estatura es: " + str(estatura) +
-       "\nEl peso es: " + str(peso) + "\nEl estado civil es: " + estado_civil +
-        "\nEl grado de estudios es: " + grado_estudio)
+# para instanciar los dartos a un objeto(nuevapersona) creamos el objeto(nuevaperona) y lo relacionamos con la clase
+nuevaPersona = Persona()
+print("\nEl nombre es: " + nuevaPersona.nombre + "\nEl apellido paterno es: " + nuevaPersona.apellido_paterno +
+     "\nEl apellido materno es: " + nuevaPersona.apellido_materno + "\nLa edad es: " + str(nuevaPersona.edad) +
+      "\nEl genero es: " + nuevaPersona.genero + "\nLa estatura es: " + str(nuevaPersona.estatura) +
+       "\nEl peso es: " + str(nuevaPersona.peso) + "\nEl estado civil es: " + nuevaPersona.estado_civil +
+        "\nEl grado de estudios es: " + nuevaPersona.grado_estudio)
 
